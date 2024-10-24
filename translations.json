@@ -1,0 +1,8 @@
+{
+  "name": "Anikiro",
+  "views": {
+    "home": {
+      "title": "Home"
+    }
+  }
+}
