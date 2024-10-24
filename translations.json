@@ -2,7 +2,7 @@
   "name": "Anikiro",
   "views": {
     "home": {
-      "title": "Home"
+      "title": "Главная"
     }
   }
 }
