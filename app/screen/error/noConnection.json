@@ -1,0 +1,7 @@
+{
+  "title": "No Internet Connection",
+  "content": "Seems like you are not connected to the internet. Please check your connection and try again.",
+  "actions": {
+    "retry": "Retry"
+  }
+}

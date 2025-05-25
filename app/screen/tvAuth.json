@@ -1,0 +1,8 @@
+{
+  "title": "Pair this TV to your account",
+  "subtitle": "You can pair this TV to your Anikiro account by entering the code below in our mobile/desktop app or website.",
+  "actions": {
+    "back": "@dictionary.back",
+    "retry": "@dictionary.retry"
+  }
+}

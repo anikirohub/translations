@@ -1,4 +1,6 @@
 {
   "login": "Login",
-  "rememberMe": "Remember Me"
+  "rememberMe": "Remember Me",
+  "close": "Close",
+  "back": "Back"
 }
