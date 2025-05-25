@@ -3,5 +3,9 @@
   "register": "Register",
   "rememberMe": "Remember Me",
   "close": "Close",
-  "back": "Back"
+  "back": "Back",
+  "locales": {
+    "en_US": "English (United States)",
+    "ru_RU": "Russian (Russia)"
+  }
 }

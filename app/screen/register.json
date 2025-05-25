@@ -1,0 +1,49 @@
+{
+  "title": "Registration",
+  "subtitle": "Fill all the fields below to create your account",
+  "fields": {
+    "username": {
+      "label": "Enter your username",
+      "hint": "Username",
+      "short": "Username must be at least 3 characters long"
+    },
+    "email": {
+      "label": "Enter your email",
+      "hint": "Email",
+      "invalid": "Invalid email address"
+    },
+    "password": {
+      "label": "Enter your password",
+      "hint": "Password",
+      "short": "Password must be at least 8 characters long"
+    },
+    "passwordConfirm": {
+      "label": "Confirm your password",
+      "hint": "Confirm Password",
+      "mismatch": "Passwords do not match"
+    },
+    "firstname": {
+      "label": "Enter your first name",
+      "hint": "First Name",
+      "long": "Last name must be at maximum 50 characters long"
+    },
+    "lastname": {
+      "label": "Enter your last name",
+      "hint": "Last Name",
+      "long": "Last name must be at maximum 50 characters long"
+    },
+    "country": {
+      "label": "Select your country"
+    },
+    "birthday": {
+      "label": "Select your birthday",
+      "hint": "Birthday"
+    }
+  },
+  "actions": {
+    "rememberMe": "After registering, you can log in without entering your credentials again",
+    "terms": "By registering, you agree to our Terms of Service and Privacy Policy which you can read on our website",
+    "register": "@dictionary.register",
+    "back": "@dictionary.back"
+  }
+}
