@@ -14,6 +14,15 @@
         "server": "@dictionary.errors.server",
         "unknown": "@dictionary.errors.unknown"
       }
+    },
+    "email": {
+      "title": "Enter Your Email",
+      "subtitle": "Your email will be used for notifications, password recovery, and to verify your account at the end of registration.",
+      "label": "Enter your email address",
+      "hint": "Email",
+      "errors": {
+        "validation": "Email must be a valid email address"
+      }
     }
   },
   "actions": {
