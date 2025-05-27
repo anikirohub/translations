@@ -9,7 +9,7 @@
         "required": "Username is required",
         "short": "Username must be at least 3 characters long",
         "taken": "Username is already taken by another user",
-        "validation": "Username must be 3–16 characters long and can only contain letters (A–Z, a–z), numbers (0–9), underscores (_), or hyphens (-).",
+        "validation": "@dictionary.errors.validation.username",
         "connection": "@dictionary.errors.connection",
         "server": "@dictionary.errors.server",
         "unknown": "@dictionary.errors.unknown"
