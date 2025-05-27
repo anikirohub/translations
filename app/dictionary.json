@@ -4,8 +4,14 @@
   "rememberMe": "Remember Me",
   "close": "Close",
   "back": "Back",
+  "next": "Next",
   "locales": {
     "en_US": "English (United States)",
     "ru_RU": "Russian (Russia)"
+  },
+  "errors": {
+    "connection": "Connection error, please check your internet connection",
+    "server": "Server error, please try again later",
+    "unknown": "An unknown error occurred"
   }
 }

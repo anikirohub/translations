@@ -1,49 +1,22 @@
 {
-  "title": "Registration",
-  "subtitle": "Fill all the fields below to create your account",
-  "fields": {
+  "steps": {
     "username": {
-      "label": "Enter your username",
-      "hint": "Username",
-      "short": "Username must be at least 3 characters long"
-    },
-    "email": {
-      "label": "Enter your email",
-      "hint": "Email",
-      "invalid": "Invalid email address"
-    },
-    "password": {
-      "label": "Enter your password",
-      "hint": "Password",
-      "short": "Password must be at least 8 characters long"
-    },
-    "passwordConfirm": {
-      "label": "Confirm your password",
-      "hint": "Confirm Password",
-      "mismatch": "Passwords do not match"
-    },
-    "firstname": {
-      "label": "Enter your first name",
-      "hint": "First Name",
-      "long": "Last name must be at maximum 50 characters long"
-    },
-    "lastname": {
-      "label": "Enter your last name",
-      "hint": "Last Name",
-      "long": "Last name must be at maximum 50 characters long"
-    },
-    "country": {
-      "label": "Select your country"
-    },
-    "birthday": {
-      "label": "Select your birthday",
-      "hint": "Birthday"
+      "title": "Select a Username",
+      "subtitle": "Choose a unique username for your account. You can not change it later.",
+      "label": "Enter a username for your account",
+      "hint": "At least 3 characters, letters and numbers only",
+      "errors": {
+        "required": "Username is required",
+        "short": "Username must be at least 3 characters long",
+        "taken": "Username is already taken by another user",
+        "validation": "Username can only contain letters and numbers",
+        "connection": "@dictionary.errors.connection",
+        "server": "@dictionary.errors.server",
+        "unknown": "@dictionary.errors.unknown"
+      }
     }
   },
   "actions": {
-    "rememberMe": "After registering, you can log in without entering your credentials again",
-    "terms": "By registering, you agree to our Terms of Service and Privacy Policy which you can read on our website",
-    "register": "@dictionary.register",
-    "back": "@dictionary.back"
+    "next": "@dictionary.next"
   }
 }
