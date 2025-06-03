@@ -23,6 +23,28 @@
       "errors": {
         "validation": "Email must be a valid email address"
       }
+    },
+    "password": {
+      "title": "Set a Password",
+      "subtitle": "Choose a strong password to protect your account. You can change it later in your account settings.",
+      "fields": {
+        "password": {
+          "label": "Enter a password for your account",
+          "hint": "At least 8 characters, letters and numbers only"
+        },
+        "passwordConfirm": {
+          "label": "Confirm your password",
+          "hint": "Repeat your password"
+        }
+      },
+      "errors": {
+        "length": "Password must be at least 8 characters long",
+        "uppercase": "Password must contain at least one uppercase letter",
+        "lowercase": "Password must contain at least one lowercase letter",
+        "digit": "Password must contain at least one digit",
+        "special": "Password must contain at least one special character (e.g., !@#$%^&*)",
+        "mismatch": "Passwords do not match"
+      }
     }
   },
   "actions": {
