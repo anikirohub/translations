@@ -77,13 +77,22 @@
         },
         "birthday": {
           "label": "Select Your Birthday",
-          "hint": "Your birthday helps us provide age-appropriate content"
+          "hint": "Format: dd.MM.yyyy (e.g., 06.11.2022)"
         }
       },
       "sheets": {
         "locale": "Select language",
         "country": "Select country",
         "birthday": "Select your birthday"
+      },
+      "errors": {
+        "locale": "A preferred language is required",
+        "country": "Country is required",
+        "birthday": {
+          "required": "Birthday is required",
+          "format": "Birthday must be in the format dd.MM.yyyy (e.g., 06.11.2022)",
+          "range": "You must be at least 10 years old to register"
+        }
       }
     }
   },
