@@ -46,6 +46,23 @@
         "mismatch": "Passwords do not match"
       }
     },
+    "name": {
+      "title": "Your Name",
+      "subtitle": "Enter your full name. It won't be visible to other users by default, but you can choose to display it in your profile later.",
+      "fields": {
+        "firstname": {
+          "label": "First Name",
+          "hint": "Your first name"
+        },
+        "lastname": {
+          "label": "Last Name",
+          "hint": "Your last name"
+        }
+      },
+      "errors": {
+        "format": "Name must contain only letters and spaces"
+      }
+    },
     "preferences": {
       "title": "Set Your Preferences",
       "subtitle": "Choose your preferences to show you relevant content.",
