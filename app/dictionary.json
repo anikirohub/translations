@@ -1,10 +1,15 @@
 {
-  "login": "Login",
-  "register": "Register",
-  "rememberMe": "Remember Me",
-  "close": "Close",
-  "back": "Back",
-  "next": "Next",
+  "actions": {
+    "login": "Login",
+    "register": "Register",
+    "rememberMe": "Remember Me",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
   "locales": {
     "en_US": "English (United States)",
     "ru_RU": "Russian (Russia)"

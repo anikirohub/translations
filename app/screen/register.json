@@ -45,9 +45,32 @@
         "special": "Password must contain at least one special character (e.g., !@#$%^&*)",
         "mismatch": "Passwords do not match"
       }
+    },
+    "preferences": {
+      "title": "Set Your Preferences",
+      "subtitle": "Choose your preferences to show you relevant content.",
+      "fields": {
+        "locale": {
+          "label": "Select Preferred Language",
+          "hint": "Select a language for interface and content"
+        },
+        "country": {
+          "label": "Select Your Country",
+          "hint": "Choose your country to get regional content"
+        },
+        "birthday": {
+          "label": "Select Your Birthday",
+          "hint": "Your birthday helps us provide age-appropriate content"
+        }
+      },
+      "sheets": {
+        "locale": "Select language",
+        "country": "Select country",
+        "birthday": "Select your birthday"
+      }
     }
   },
   "actions": {
-    "next": "@dictionary.next"
+    "next": "@dictionary.actions.next"
   }
 }
