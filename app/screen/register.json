@@ -60,6 +60,7 @@
         }
       },
       "errors": {
+        "length": "First and last names must be at least 2 and at most 27 characters long",
         "format": "Name must contain only letters and spaces"
       }
     },
