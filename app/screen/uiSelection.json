@@ -3,6 +3,6 @@
   "subtitle": "You can change the UI type later in the settings.",
   "types": {
     "phone": "Phone",
-    "tv": "TV / Wide Screen"
+    "tv": "TV"
   }
 }
