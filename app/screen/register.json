@@ -81,6 +81,9 @@
           "hint": "dd.MM.yyyy (06.11.2022)"
         }
       },
+      "actions": {
+        "search": "@dictionary.actions.search"
+      },
       "sheets": {
         "locale": "Select language",
         "country": "Select country",
@@ -96,6 +99,16 @@
           "young": "You must be at least 10 years old to register",
           "day": "@dictionary.errors.datetime.day"
         }
+      }
+    },
+    "confirmation": {
+      "title": "Complete Your Registration",
+      "subtitle": "You're almost there! Just one more step to start using the app.",
+      "rules": "I have read and agree to abide by the Community Rules.",
+      "terms": "I agree to the Terms and Conditions and have read the Privacy Policy.",
+      "rememberMe": "Keep me signed in after registration",
+      "actions": {
+        "finish": "@dictionary.actions.register"
       }
     }
   },
