@@ -77,8 +77,8 @@
           "hint": "Choose your country to get regional content"
         },
         "birthday": {
-          "label": "Select Your Birthday",
-          "hint": "Format: dd.MM.yyyy (e.g., 06.11.2022)"
+          "label": "Write Your Birthday",
+          "hint": "dd.MM.yyyy (06.11.2022)"
         }
       },
       "sheets": {
@@ -91,8 +91,10 @@
         "country": "Country is required",
         "birthday": {
           "required": "Birthday is required",
-          "format": "Birthday must be in the format dd.MM.yyyy (e.g., 06.11.2022)",
-          "range": "You must be at least 10 years old to register"
+          "format": "Birthday must be in the format dd.MM.yyyy (e.g., 06.11.2022) and be a real date",
+          "range": "Birthday must be realistic (not in the future or more than 100 years ago)",
+          "young": "You must be at least 10 years old to register",
+          "day": "@dictionary.errors.datetime.day"
         }
       }
     }
