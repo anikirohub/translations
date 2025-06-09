@@ -1,0 +1,9 @@
+{
+  "items": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "library": "Library",
+    "search": "Search",
+    "settings": "Settings"
+  }
+}
