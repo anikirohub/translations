@@ -15,6 +15,10 @@
     "en_US": "English (United States)",
     "ru_RU": "Russian (Russia)"
   },
+  "themes": {
+    "dark": "Dark (Default)",
+    "oled": "OLED (Deep Black)"
+  },
   "errors": {
     "datetime": {
       "day": "Day is invalid for the selected month and year",
