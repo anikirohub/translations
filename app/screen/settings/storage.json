@@ -2,7 +2,11 @@
   "name": "Storage",
   "storageView": {
     "title": "Storage Used",
-    "subtitle": "See how space is distributed across different data types."
+    "subtitle": "See how space is distributed across different data types.",
+    "segments": {
+      "network": "Cache",
+      "translations": "Translations"
+    }
   },
   "clearNetworkCache": {
     "title": "Clear Network Cache",
