@@ -1,8 +1,8 @@
 {
   "name": "Storage",
-  "storage": {
+  "storageView": {
     "title": "Storage Used",
-    "subtitle": "You can see how much storage is used by the app and clear caches to free up space. Currently, the app is using {size} of storage."
+    "subtitle": "The app is using {size} of storage. See how space is distributed across different data types."
   },
   "clearNetworkCache": {
     "title": "Clear Network Cache",
