@@ -1,0 +1,41 @@
+{
+  "name": "Storage",
+  "storageView": {
+    "title": "Storage Used",
+    "subtitle": "See how space is distributed across different data types.",
+    "segments": {
+      "network": "Cache",
+      "translations": "Translations"
+    }
+  },
+  "clearNetworkCache": {
+    "title": "Clear Network Cache",
+    "subtitle": "Remove cached data from network requests to free up space and ensure you have the latest content.",
+    "action": "Clear Cache",
+    "modal": {
+      "success": {
+        "title": "Cache Cleared",
+        "content": "All cached network data has been successfully cleared."
+      },
+      "error": {
+        "title": "Error Clearing Cache",
+        "content": "An error occurred while trying to clear the network cache. Please try again later."
+      }
+    }
+  },
+  "clearTranslationCache": {
+    "title": "Clear Translation Cache",
+    "subtitle": "Remove cached translations to ensure you have the latest language updates.",
+    "action": "Clear Translations",
+    "modal": {
+      "success": {
+        "title": "Translations Cleared",
+        "content": "All cached translations have been successfully cleared."
+      },
+      "error": {
+        "title": "Error Clearing Translations",
+        "content": "An error occurred while trying to clear the cached translations. Please try again later."
+      }
+    }
+  }
+}

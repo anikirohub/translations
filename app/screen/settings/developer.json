@@ -1,3 +1,7 @@
 {
-  "name": "Developer"
+  "name": "Developer",
+  "environment": {
+    "title": "Environment",
+    "subtitle": "Select the environment for the app"
+  }
 }
