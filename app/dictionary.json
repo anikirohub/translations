@@ -10,7 +10,8 @@
     "retry": "Retry",
     "cancel": "Cancel",
     "save": "Save",
-    "search": "Search"
+    "search": "Search",
+    "confirm": "Confirm"
   },
   "locales": {
     "en_US": "English (United States)",
