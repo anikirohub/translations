@@ -21,18 +21,6 @@
     "dark": "Dark (Default)",
     "oled": "OLED (Deep Black)"
   },
-  "errors": {
-    "datetime": {
-      "day": "Day is invalid for the selected month and year",
-      "month": "Month should be between 1 and 12"
-    },
-    "validation": {
-      "username": "Username must be 3–16 characters long and can only contain letters (A–Z, a–z), numbers (0–9), underscores (_), or hyphens (-)."
-    },
-    "connection": "Connection error, please check your internet connection",
-    "server": "Server error, please try again later",
-    "unknown": "An unknown error occurred"
-  },
   "words": {
     "profile": "Profile",
     "settings": "Settings"

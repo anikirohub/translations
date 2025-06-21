@@ -6,13 +6,6 @@
     "retry": "@dictionary.actions.retry"
   },
   "errors": {
-    "expired": {
-        "title": "Pairing code expired",
-        "message": "The code is only valid for 5 minutes. Please generate a new code by pressing the retry button."
-    },
-    "unknown": {
-        "title": "@dictionary.errors.unknown",
-        "message": "We encountered an unexpected error while trying to pair this TV. If the problem persists, please try again later or contact support."
-    }
+    "expired": "The code is only valid for 5 minutes. Please generate a new code by pressing the retry button."
   }
 }

@@ -1,0 +1,6 @@
+{
+  "username": "Username must be 3–16 characters long and can only contain letters (A–Z, a–z), numbers (0–9), underscores (_), or hyphens (-).",
+  "password": {
+    "short": "Password must be at least 8 characters long"
+  }
+}

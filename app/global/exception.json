@@ -1,0 +1,12 @@
+{
+  "unknown": "An unknown error occurred. Please try again later.",
+  "network": "Network error, please check your connection.",
+  "server": "Server error, please try again later.",
+  "auth": {
+    "invalidCredentials": "Invalid username or password.",
+    "refreshTokenExpired": "Your session has expired. Please log in again.",
+    "expired": {
+      "refreshToken": "Your session has expired. Please log in again."
+    }
+  }
+}

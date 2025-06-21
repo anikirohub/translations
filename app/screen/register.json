@@ -116,10 +116,7 @@
     "next": "@dictionary.actions.next"
   },
   "errors": {
-    "validation": "@dictionary.errors.validation",
-    "exists": "Username or email is already used by another user",
-    "connection": "@dictionary.errors.connection",
-    "server": "@dictionary.errors.server",
-    "unknown": "@dictionary.errors.unknown"
+    "validation": "Invalid input, please check your entries",
+    "exists": "Username or email is already used by another user"
   }
 }
