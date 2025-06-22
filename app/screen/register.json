@@ -113,7 +113,8 @@
     }
   },
   "actions": {
-    "next": "@dictionary.actions.next"
+    "next": "@dictionary.actions.next",
+    "back": "Go a step back"
   },
   "errors": {
     "validation": "Invalid input, please check your entries",
