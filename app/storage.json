@@ -1,0 +1,7 @@
+{
+  "types": {
+    "http": "Network",
+    "translations": "Translations",
+    "other": "Other"
+  }
+}
