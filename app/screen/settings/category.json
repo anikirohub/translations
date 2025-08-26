@@ -1,7 +1,5 @@
 {
-  "category": {
-    "general": "General",
-    "advanced": "Advanced",
-    "developer": "Developer"
-  }
+  "general": "General",
+  "advanced": "Advanced",
+  "developer": "Developer"
 }
