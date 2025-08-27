@@ -3,5 +3,9 @@
   "environment": {
     "title": "Environment",
     "subtitle": "Select the environment for the app"
+  },
+  "mockCaching": {
+    "title": "Mock Caching",
+    "subtitle": "Toggle caching of web requests when using mock environment"
   }
 }
