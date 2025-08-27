@@ -1,3 +1,12 @@
 {
-  "name": "Account"
+  "name": "Account",
+  "logout": {
+    "title": "Log Out",
+    "subtitle": "You can log out of your account by using this button. This will require you to log back in to the app.",
+    "action": "Log Out",
+    "modal": {
+      "title": "Are you sure you want to log out?",
+      "content": "Logging out will require you to log back in to the app."
+    }
+  }
 }
