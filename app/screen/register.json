@@ -6,13 +6,12 @@
       "label": "Enter a username for your account",
       "hint": "At least 3 characters, letters and numbers only",
       "errors": {
-        "required": "Username is required",
-        "short": "Username must be at least 3 characters long",
-        "taken": "Username is already taken by another user",
-        "validation": "@dictionary.errors.validation.username",
-        "connection": "@dictionary.errors.connection",
-        "server": "@dictionary.errors.server",
-        "unknown": "@dictionary.errors.unknown"
+        "empty": "Username is required",
+        "validation": "@global.validation.username",
+        "unavailable": "Username is already taken by another user",
+        "connection": "@global.exception.network",
+        "server": "@global.exception.server",
+        "unknown": "@global.exception.unknown"
       }
     },
     "email": {
@@ -21,7 +20,9 @@
       "label": "Enter your email address",
       "hint": "Email",
       "errors": {
-        "validation": "Email must be a valid email address"
+        "empty": "Email is required",
+        "validation": "@global.validation.email",
+        "unavailable": "Email is already used by another user"
       }
     },
     "password": {
@@ -38,11 +39,12 @@
         }
       },
       "errors": {
-        "length": "Password must be at least 8 characters long",
-        "uppercase": "Password must contain at least one uppercase letter",
-        "lowercase": "Password must contain at least one lowercase letter",
-        "digit": "Password must contain at least one digit",
-        "special": "Password must contain at least one special character (e.g., !@#$%^&*)",
+        "empty": "Password and confirmation are required",
+        "length": "@global.validation.password.short",
+        "uppercase": "@global.validation.password.uppercase",
+        "lowercase": "@global.validation.password.lowercase",
+        "digit": "@global.validation.password.digit",
+        "special": "@global.validation.password.special",
         "mismatch": "Passwords do not match"
       }
     },
@@ -60,8 +62,15 @@
         }
       },
       "errors": {
-        "length": "First and last names must be at least 2 and at most 27 characters long",
-        "format": "Name must contain only letters and spaces"
+        "empty": "First name and last name are required",
+        "length": {
+          "firstname": "@global.validation.name.firstname",
+          "lastname": "@global.validation.name.lastname"
+        },
+        "format": {
+          "firstname": "@global.validation.name.firstname",
+          "lastname": "@global.validation.name.lastname"
+        }
       }
     },
     "preferences": {
@@ -90,14 +99,11 @@
         "birthday": "Select your birthday"
       },
       "errors": {
-        "locale": "A preferred language is required",
-        "country": "Country is required",
         "birthday": {
-          "required": "Birthday is required",
-          "format": "Birthday must be in the format dd.MM.yyyy (e.g., 06.11.2022) and be a real date",
-          "range": "Birthday must be realistic (not in the future or more than 100 years ago)",
-          "young": "You must be at least 10 years old to register",
-          "day": "@dictionary.errors.datetime.day"
+          "empty": "Birthday is required",
+          "format": "@global.validation.birthday.format",
+          "range": "@global.validation.birthday.range",
+          "young": "@global.validation.birthday.young"
         }
       }
     },
@@ -114,10 +120,11 @@
   },
   "actions": {
     "next": "@dictionary.actions.next",
-    "back": "Go a step back"
+    "back": "Go a step back",
+    "cancel": "Cancel registration"
   },
   "errors": {
-    "validation": "Invalid input, please check your entries",
-    "exists": "Username or email is already used by another user"
+    "validation": "@global.exception.register.validation",
+    "exists": "@global.exception.register.exists"
   }
 }

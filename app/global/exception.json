@@ -8,5 +8,9 @@
     "expired": {
       "refreshToken": "Your session has expired. Please log in again."
     }
+  },
+  "register": {
+    "exists": "An account with this username or email already exists.",
+    "validation": "There was a problem with your registration details. Please check and try again."
   }
 }

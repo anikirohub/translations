@@ -1,6 +1,26 @@
 {
   "username": "Username must be 3–16 characters long and can only contain letters (A–Z, a–z), numbers (0–9), underscores (_), or hyphens (-).",
+  "email": "Email must be a valid email address",
   "password": {
-    "short": "Password must be at least 8 characters long"
+    "short": "Password must be at least 8 characters long",
+    "uppercase": "Password must contain at least one uppercase letter (A–Z)",
+    "lowercase": "Password must contain at least one lowercase letter (a–z)",
+    "digit": "Password must contain at least one digit (0–9)",
+    "special": "Password must contain at least one special character (e.g., !@#$%^&*)"
+  },
+  "name": {
+    "length": {
+      "firstname": "First name must be between 2 and 27 characters long",
+      "lastname": "Last name must be between 2 and 27 characters long"
+    },
+    "format": {
+      "firstname": "First name can only contain letters and spaces",
+      "lastname": "Last name can only contain letters and spaces"
+    }
+  },
+  "birthday": {
+    "format": "Birthday must be in the format dd.MM.yyyy (e.g., 06.11.2022)",
+    "range": "Birthday must be realistic (not in the future or more than 100 years ago)",
+    "young": "You must be at least 13 years old to register"
   }
 }
