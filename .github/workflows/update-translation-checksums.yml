@@ -1,0 +1,119 @@
+name: Update Translation Checksums
+
+on:
+  push:
+    branches-ignore: []
+    paths-ignore:
+      - 'app-checksum.txt'
+      - 'web-checksum.txt'
+  pull_request:
+    branches-ignore: []
+    paths-ignore:
+      - 'app-checksum.txt'
+      - 'web-checksum.txt'
+
+jobs:
+  update-checksums:
+    # Only run on pushes, not pull requests, to avoid conflicts
+    if: github.event_name == 'push'
+    
+    runs-on: ubuntu-latest
+    
+    # Skip if the commit was made by this workflow
+    steps:
+      - name: Check if commit is from workflow
+        id: check_workflow
+        run: |
+          if [[ "${{ github.event.head_commit.author.name }}" == "github-actions[bot]" ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout code
+        if: steps.check_workflow.outputs.skip == 'false'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Git
+        if: steps.check_workflow.outputs.skip == 'false'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Calculate App Translation Checksum
+        if: steps.check_workflow.outputs.skip == 'false'
+        id: app_checksum
+        run: |
+          # Find all JSON files in app directory and calculate combined checksum
+          find app -name "*.json" -type f | sort | xargs cat | sha256sum | cut -d' ' -f1 > app-checksum.txt
+          echo "checksum=$(cat app-checksum.txt)" >> $GITHUB_OUTPUT
+          echo "App translation checksum: $(cat app-checksum.txt)"
+
+      - name: Calculate Web Translation Checksum
+        if: steps.check_workflow.outputs.skip == 'false'
+        id: web_checksum
+        run: |
+          # Find all JSON files in web directory and calculate combined checksum
+          find web -name "*.json" -type f | sort | xargs cat | sha256sum | cut -d' ' -f1 > web-checksum.txt
+          echo "checksum=$(cat web-checksum.txt)" >> $GITHUB_OUTPUT
+          echo "Web translation checksum: $(cat web-checksum.txt)"
+
+      - name: Check if checksums changed
+        if: steps.check_workflow.outputs.skip == 'false'
+        id: check_changes
+        run: |
+          # Check if app checksum changed
+          if [ -f "app-checksum.txt" ]; then
+            if git diff --quiet app-checksum.txt; then
+              echo "app_changed=false" >> $GITHUB_OUTPUT
+            else
+              echo "app_changed=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "app_changed=true" >> $GITHUB_OUTPUT
+          fi
+          
+          # Check if web checksum changed
+          if [ -f "web-checksum.txt" ]; then
+            if git diff --quiet web-checksum.txt; then
+              echo "web_changed=false" >> $GITHUB_OUTPUT
+            else
+              echo "web_changed=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "web_changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push checksum files
+        if: steps.check_workflow.outputs.skip == 'false' && (steps.check_changes.outputs.app_changed == 'true' || steps.check_changes.outputs.web_changed == 'true')
+        run: |
+          # Force add checksum files even if they're in .gitignore
+          git add -f app-checksum.txt web-checksum.txt
+          git commit -m "Update translation checksums
+
+          App checksum: ${{ steps.app_checksum.outputs.checksum }}
+          Web checksum: ${{ steps.web_checksum.outputs.checksum }}
+          
+          [skip ci]" || echo "No changes to commit"
+          git push
+
+      - name: Summary
+        if: steps.check_workflow.outputs.skip == 'false'
+        run: |
+          echo "## Translation Checksum Update Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**App Translation Checksum:** \`${{ steps.app_checksum.outputs.checksum }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Web Translation Checksum:** \`${{ steps.web_checksum.outputs.checksum }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check_changes.outputs.app_changed }}" == "true" ]; then
+            echo "✅ App translation checksum updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ App translation checksum unchanged" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ "${{ steps.check_changes.outputs.web_changed }}" == "true" ]; then
+            echo "✅ Web translation checksum updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ Web translation checksum unchanged" >> $GITHUB_STEP_SUMMARY
+          fi
