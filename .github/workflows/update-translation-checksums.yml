@@ -65,32 +65,42 @@ jobs:
         id: check_changes
         run: |
           # Check if app checksum changed
-          if [ -f "app-checksum.txt" ]; then
-            if git diff --quiet app-checksum.txt; then
+          if [ -f "app-checksum.txt" ] && git ls-files --error-unmatch app-checksum.txt >/dev/null 2>&1; then
+            # File exists in git, check if content changed
+            if git diff --quiet HEAD -- app-checksum.txt; then
               echo "app_changed=false" >> $GITHUB_OUTPUT
             else
               echo "app_changed=true" >> $GITHUB_OUTPUT
             fi
           else
+            # File doesn't exist in git, so it's a new file
             echo "app_changed=true" >> $GITHUB_OUTPUT
           fi
           
           # Check if web checksum changed
-          if [ -f "web-checksum.txt" ]; then
-            if git diff --quiet web-checksum.txt; then
+          if [ -f "web-checksum.txt" ] && git ls-files --error-unmatch web-checksum.txt >/dev/null 2>&1; then
+            # File exists in git, check if content changed
+            if git diff --quiet HEAD -- web-checksum.txt; then
               echo "web_changed=false" >> $GITHUB_OUTPUT
             else
               echo "web_changed=true" >> $GITHUB_OUTPUT
             fi
           else
+            # File doesn't exist in git, so it's a new file
             echo "web_changed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push checksum files
         if: steps.check_workflow.outputs.skip == 'false' && (steps.check_changes.outputs.app_changed == 'true' || steps.check_changes.outputs.web_changed == 'true')
         run: |
-          # Force add checksum files even if they're in .gitignore
-          git add -f app-checksum.txt web-checksum.txt
+          echo "App changed: ${{ steps.check_changes.outputs.app_changed }}"
+          echo "Web changed: ${{ steps.check_changes.outputs.web_changed }}"
+          
+          # Add checksum files
+          git add app-checksum.txt web-checksum.txt
+          
+          git status
+          
           git commit -m "Update translation checksums
 
           App checksum: ${{ steps.app_checksum.outputs.checksum }}

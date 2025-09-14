@@ -3,8 +3,3 @@
 .idea/
 *.swp
 *.swo
-
-# Translation checksum files (managed by GitHub Actions)
-# These should not be manually edited
-app-checksum.txt
-web-checksum.txt
