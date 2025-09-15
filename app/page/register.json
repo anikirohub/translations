@@ -64,12 +64,12 @@
       "errors": {
         "empty": "First name and last name are required",
         "length": {
-          "firstname": "@global.validation.name.firstname",
-          "lastname": "@global.validation.name.lastname"
+          "firstname": "@global.validation.name.length.firstname",
+          "lastname": "@global.validation.name.length.lastname"
         },
         "format": {
-          "firstname": "@global.validation.name.firstname",
-          "lastname": "@global.validation.name.lastname"
+          "firstname": "@global.validation.name.format.firstname",
+          "lastname": "@global.validation.name.format.lastname"
         }
       }
     },
