@@ -112,13 +112,11 @@
       "subtitle": "You're almost there! Just one more step to start using the app.",
       "rules": "I have read and agree to abide by the Community Rules.",
       "terms": "I agree to the Terms and Conditions and have read the Privacy Policy.",
-      "rememberMe": "Keep me signed in after registration",
-      "actions": {
-        "finish": "@dictionary.actions.register"
-      }
+      "rememberMe": "Keep me signed in after registration"
     }
   },
   "actions": {
+    "finish": "@dictionary.actions.register",
     "next": "@dictionary.actions.next",
     "back": "Go a step back",
     "cancel": "Cancel registration"
